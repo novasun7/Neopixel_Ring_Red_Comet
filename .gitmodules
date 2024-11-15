@@ -1,0 +1,3 @@
+[submodule "lib/Particle-NeoPixel"]
+	path = lib/Particle-NeoPixel
+	url = git@github.com:technobly/Particle-NeoPixel.git
