@@ -39,7 +39,14 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, PIXEL_TYPE);
 
 int led2 = D7;
 
+LEDSystemTheme theme; // Enable custom theme
+
 void setup() {
+  // Set LED_SIGNAL_CLOUD_CONNECTED to no color to turn off status LED
+  // once the Photon is connected to the network
+  theme.setColor(LED_SIGNAL_CLOUD_CONNECTED, 0x00000000); 
+  theme.apply(); // Apply theme settings
+
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
   
